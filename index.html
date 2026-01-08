@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ficha de Personagem — Rasgo da Fenda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="app">
+
+  <!-- TELA INICIAL -->
+  <section id="loginScreen" class="screen active">
+    <h1>FICHA DE PERSONAGEM</h1>
+    <h2>RASGO DA FENDA</h2>
+    <p class="subtitle">Aegis — O Despertar</p>
+
+    <input type="text" id="username" placeholder="Nome do usuário" />
+    <button onclick="login()">Entrar</button>
+  </section>
+
+  <!-- MENU -->
+  <section id="menuScreen" class="screen">
+    <h2>Bem-vindo, <span id="userNameDisplay"></span></h2>
+
+    <div class="menu">
+      <button onclick="openCreate()">Criar Personagem</button>
+      <button onclick="openCharacters()">Personagens <span id="charCount"></span></button>
+    </div>
+  </section>
+
+  <!-- CRIAR PERSONAGEM -->
+  <section id="createScreen" class="screen">
+    <h2>Identidade</h2>
+
+    <input id="charName" placeholder="Nome do Personagem" />
+    <input id="playerName" placeholder="Nome do Jogador" />
+
+    <textarea id="appearance" placeholder="Aparência (até 4000 caracteres)"></textarea>
+    <textarea id="history" placeholder="História"></textarea>
+    <textarea id="ambition" placeholder="Ambições"></textarea>
+
+    <button onclick="goToSkills()">Próximo</button>
+  </section>
+
+  <!-- PERÍCIAS -->
+  <section id="skillsScreen" class="screen">
+    <h2>Perícias</h2>
+    <p>Pontos disponíveis: <span id="points">200</span></p>
+
+    <div id="skills"></div>
+
+    <button onclick="finishCharacter()">Concluir</button>
+  </section>
+
+  <!-- PERSONAGENS -->
+  <section id="charactersScreen" class="screen">
+    <h2>Personagens</h2>
+    <div id="characterList"></div>
+    <button onclick="backToMenu()">Voltar</button>
+  </section>
+
+  <!-- VISUALIZAR -->
+  <section id="viewScreen" class="screen">
+    <h2 id="viewName"></h2>
+
+    <div class="bars">
+      <div>Vida: <button onclick="modStat('vida',-1)">-</button> <span id="vida"></span> <button onclick="modStat('vida',1)">+</button></div>
+      <div>Sanidade: <button onclick="modStat('sanidade',-1)">-</button> <span id="sanidade"></span> <button onclick="modStat('sanidade',1)">+</button></div>
+      <div>Incontrole: <button onclick="modStat('incontrole',-1)">-</button> <span id="incontrole"></span> <button onclick="modStat('incontrole',1)">+</button></div>
+    </div>
+
+    <button onclick="despertar()">DESPERTAR</button>
+    <p id="raceInfo"></p>
+
+    <button onclick="backToMenu()">Voltar</button>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
