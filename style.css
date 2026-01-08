@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial;
+  background: radial-gradient(#0d1b12, #050a07);
+  color: #e0e0e0;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  opacity: 0.7;
+}
+
+input, textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  background: #1b2a20;
+  border: 1px solid #3b5;
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #355f3a;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4f8b58;
+}
+
+.menu button {
+  margin: 10px 0;
+}
+
+.bars div {
+  margin: 10px 0;
+}
